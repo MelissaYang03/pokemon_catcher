@@ -6,6 +6,7 @@ const MyPokemon = require('../models/myPokemonModel');
 // Get All pokemon list
 router.get('/api/mypokemons', (req, res) => {
     MyPokemon.find()
+        .sort({ nickname })
         .then(pokemons => res.json(pokemons))
 });
 /*router.get('/api/mypokemons', (req, res) => {
