@@ -149,9 +149,7 @@ export default function PokemonDetail(props) {
                             }
                     });
             
-                    setButtonPopup(false);
-                    setInput({ nickname: '' });
-                    setInputErrors({ nickname: '' });
+                    ResetInput();
 
                     setAlertMessage({
                         message: 'Nickname is successfully saved',
@@ -163,6 +161,12 @@ export default function PokemonDetail(props) {
                 }
             
             });
+    }
+
+    function ResetInput() {
+        setButtonPopup(false);
+        setInput({ nickname: '' });
+        setInputErrors({ nickname: '' });
     }
 
     return (
@@ -181,7 +185,7 @@ export default function PokemonDetail(props) {
                 <PopupInput type='text' name='nickname' value={input.nickname} onChange={handleInputChange} />
                 {inputErrors.nickname && <PopupInputError>{inputErrors.nickname}</PopupInputError>}
                 <PopupButtons>
-                    <PopupButton bgColor={'#9d2c2c'} onClick={() => setButtonPopup(false)}>Release</PopupButton>
+                    <PopupButton bgColor={'#9d2c2c'} onClick={() => ResetInput()}>Release</PopupButton>
                     <PopupButton bgColor={'#468783'} onClick={createNewPokemon}>Save</PopupButton>
                 </PopupButtons>
             </Popup>
