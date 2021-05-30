@@ -49,6 +49,7 @@
     "@babel/preset-react": "^7.13.13",
     "@emotion/babel-plugin": "^11.3.0",
     "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",

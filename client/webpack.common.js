@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.js",
@@ -10,6 +11,22 @@ module.exports = {
         }),
         new WorkboxWebpackPlugin.GenerateSW({
             swDest: 'sw.js'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: "./src/manifest.json",
+                    to: "manifest.json"
+                },
+                {
+                    from: "./src/assets/favicon.ico",
+                    to: "./imgs/favicon.ico"
+                },
+                {
+                    from: "./src/assets/pokemon-app-icon.png",
+                    to: "./imgs/pokemon-app-icon.png"
+                }
+            ]
         })
     ],
     module : {
