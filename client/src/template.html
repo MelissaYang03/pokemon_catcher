@@ -14,4 +14,9 @@
   <body>
     <div id="root"></div>
   </body>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/dist/sw.js')
+    }
+  </script>
 </html>
