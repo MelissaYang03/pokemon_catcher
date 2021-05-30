@@ -3,14 +3,19 @@
     "name": "Pokemon Catcher",
     "icons": [
         {
-          "src": "/imgs/favicon.ico",
-          "sizes": "64x64 32x32 24x24 16x16",
-          "type": "image/x-icon"
+            "src": "/imgs/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
         },
         {
-          "src": "/imgs/pokemon-app-icon.png",
-          "type": "image/png",
-          "sizes": "175x175"
+            "src": "/imgs/pokemon-app-icon-128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/imgs/pokemon-app-icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ],
     "start_url": "./",

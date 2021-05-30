@@ -23,8 +23,12 @@ module.exports = {
                     to: "./imgs/favicon.ico"
                 },
                 {
-                    from: "./src/assets/pokemon-app-icon.png",
-                    to: "./imgs/pokemon-app-icon.png"
+                    from: "./src/assets/pokemon-app-icon-128.png",
+                    to: "./imgs/pokemon-app-icon-128.png"
+                },
+                {
+                    from: "./src/assets/pokemon-app-icon-512.png",
+                    to: "./imgs/pokemon-app-icon-512.png"
                 }
             ]
         })
